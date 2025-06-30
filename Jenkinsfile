@@ -31,4 +31,6 @@ pipeline {
                 sh 'npm run start'
             }
         }
+    }
+}
    
