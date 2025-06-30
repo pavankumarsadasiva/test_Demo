@@ -16,6 +16,12 @@ pipeline {
                 bat 'npm install'
             }
         }
+        stage('Confirm Dependencies') {
+            steps { 
+                bat 'npm install',
+                bat 'dir'
+            }
+        }
         stage('Run Tests') {
             steps {
                 bat 'npm test'
