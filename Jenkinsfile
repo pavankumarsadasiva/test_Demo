@@ -16,11 +16,6 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Install Nodemone') {
-            steps {
-                bat 'npm install nodemon -g'
-            }
-        }
         stage('Run Tests') {
             steps {
                 bat 'npm test'
