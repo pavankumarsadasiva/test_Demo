@@ -12,8 +12,13 @@ pipeline {
             }
         }
         stage('Install Dependencies') {
-            steps {
+            steps { 
                 bat 'npm install'
+            }
+        }
+        stage('Install Nodemone') {
+            steps {
+                bat 'npm install nodemon -g'
             }
         }
         stage('Run Tests') {
