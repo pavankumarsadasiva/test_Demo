@@ -13,22 +13,22 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
         // stage('Build Project') {
         //     steps {
-        //         sh 'npm run build'
+        //         bat 'npm run build'
         //     }
         // }
         stage('Deploy') {
             steps {
-                sh 'npm run start'
+                bat 'npm run start'
             }
         }
     }
